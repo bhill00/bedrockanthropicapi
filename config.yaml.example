@@ -25,19 +25,6 @@ model_list:
       aws_region_name: us-west-2
       api_key: os.environ/BEDROCK_API_KEY
 
-  # Sonnet 4
-  - model_name: claude-sonnet-4-20250514
-    litellm_params:
-      model: bedrock/converse/us.anthropic.claude-sonnet-4-20250514-v1:0
-      aws_region_name: us-west-2
-      api_key: os.environ/BEDROCK_API_KEY
-
-  - model_name: claude-sonnet-4
-    litellm_params:
-      model: bedrock/converse/us.anthropic.claude-sonnet-4-20250514-v1:0
-      aws_region_name: us-west-2
-      api_key: os.environ/BEDROCK_API_KEY
-
   # Haiku 4.5
   - model_name: claude-haiku-4-5-20251001
     litellm_params:
