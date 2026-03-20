@@ -182,8 +182,12 @@ You should get a JSON response with Claude's reply.
 ```bash
 export ANTHROPIC_BASE_URL="http://localhost:4000"
 export ANTHROPIC_API_KEY="sk-1234"
+export DISABLE_TELEMETRY=1
+export DISABLE_ERROR_REPORTING=1
 claude
 ```
+
+> **Why disable telemetry?** Even though your prompts and model traffic are routed through Bedrock via LiteLLM, Claude Code may still send telemetry and error reports directly to Anthropic's servers. Setting `DISABLE_TELEMETRY=1` and `DISABLE_ERROR_REPORTING=1` prevents this metadata from leaving your environment. This is recommended when working with protected data to ensure no information — even operational metadata — is sent outside the AWS boundary. See [claude-code#7031](https://github.com/anthropics/claude-code/issues/7031) for details.
 
 #### Anthropic Python SDK
 
