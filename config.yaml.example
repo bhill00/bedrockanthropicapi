@@ -1,0 +1,68 @@
+model_list:
+  # Sonnet 4.6 (note: no -v1 suffix for sonnet)
+  - model_name: claude-sonnet-4-6
+    litellm_params:
+      model: bedrock/converse/us.anthropic.claude-sonnet-4-6
+      aws_region_name: us-west-2
+      api_key: os.environ/BEDROCK_API_KEY
+
+  - model_name: claude-sonnet-4-6-20260220
+    litellm_params:
+      model: bedrock/converse/us.anthropic.claude-sonnet-4-6
+      aws_region_name: us-west-2
+      api_key: os.environ/BEDROCK_API_KEY
+
+  # Opus 4.6
+  - model_name: claude-opus-4-6
+    litellm_params:
+      model: bedrock/converse/us.anthropic.claude-opus-4-6-v1
+      aws_region_name: us-west-2
+      api_key: os.environ/BEDROCK_API_KEY
+
+  - model_name: claude-opus-4-6-20260220
+    litellm_params:
+      model: bedrock/converse/us.anthropic.claude-opus-4-6-v1
+      aws_region_name: us-west-2
+      api_key: os.environ/BEDROCK_API_KEY
+
+  # Sonnet 4
+  - model_name: claude-sonnet-4-20250514
+    litellm_params:
+      model: bedrock/converse/us.anthropic.claude-sonnet-4-20250514-v1:0
+      aws_region_name: us-west-2
+      api_key: os.environ/BEDROCK_API_KEY
+
+  - model_name: claude-sonnet-4
+    litellm_params:
+      model: bedrock/converse/us.anthropic.claude-sonnet-4-20250514-v1:0
+      aws_region_name: us-west-2
+      api_key: os.environ/BEDROCK_API_KEY
+
+  # Haiku 4.5
+  - model_name: claude-haiku-4-5-20251001
+    litellm_params:
+      model: bedrock/converse/us.anthropic.claude-haiku-4-5-20251001-v1:0
+      aws_region_name: us-west-2
+      api_key: os.environ/BEDROCK_API_KEY
+
+  - model_name: claude-haiku-4-5
+    litellm_params:
+      model: bedrock/converse/us.anthropic.claude-haiku-4-5-20251001-v1:0
+      aws_region_name: us-west-2
+      api_key: os.environ/BEDROCK_API_KEY
+
+  # Opus 4
+  - model_name: claude-opus-4-20250115
+    litellm_params:
+      model: bedrock/converse/us.anthropic.claude-opus-4-20250115-v1:0
+      aws_region_name: us-west-2
+      api_key: os.environ/BEDROCK_API_KEY
+
+  - model_name: claude-opus-4
+    litellm_params:
+      model: bedrock/converse/us.anthropic.claude-opus-4-20250115-v1:0
+      aws_region_name: us-west-2
+      api_key: os.environ/BEDROCK_API_KEY
+
+general_settings:
+  master_key: sk-1234
