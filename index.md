@@ -39,7 +39,7 @@ Claude Code / Anthropic SDK / OpenAI-compatible client
 ## Requirements
 
 - A UCSB AWS sub-account via [aws.cloud.ucsb.edu](https://aws.cloud.ucsb.edu)
-- Bedrock model access enabled in your account (see [Step 1](#1-enable-anthropic-model-access))
+- Bedrock model access enabled in your account (see [Step 2](#2-enable-anthropic-model-access))
 - Python 3.8+ with pip, or Docker
 - LiteLLM installed: `pip install 'litellm[proxy]' boto3`
 
@@ -47,7 +47,11 @@ Claude Code / Anthropic SDK / OpenAI-compatible client
 
 ## Setup
 
-### 1. Enable Anthropic Model Access
+### 1. Obtain a UCSB AWS Account
+
+If you don't already have one, request a UCSB department AWS sub-account through [docs.cloud.ucsb.edu](https://docs.cloud.ucsb.edu). Your account will be set up under the UCSB AWS Organization and inherits the UC/AWS DPA coverage.
+
+### 2. Enable Anthropic Model Access
 
 The first time you use Anthropic models in a Bedrock account, AWS requires a **one-time use case submission** that is shared with Anthropic. Serverless foundation models are now automatically enabled on first invocation — the old Model Access page has been retired — but the Anthropic use case form is still required before first use.
 
@@ -69,7 +73,7 @@ After submission, it may take up to 15 minutes for access to propagate.
 
 ---
 
-### 2. Generate a Bedrock API Key
+### 3. Generate a Bedrock API Key
 
 In the AWS Console, navigate to **Bedrock > API keys**.
 
@@ -91,7 +95,7 @@ Copy the key — you'll need it in the next step.
 
 ---
 
-### 3. Create a LiteLLM Config
+### 4. Create a LiteLLM Config
 
 Create a file called `config.yaml`:
 
@@ -146,7 +150,7 @@ general_settings:
 
 ---
 
-### 4. Start the Proxy
+### 5. Start the Proxy
 
 ```bash
 BEDROCK_API_KEY="ABSK..." \
@@ -171,7 +175,7 @@ You should get a JSON response with Claude's reply.
 
 ---
 
-### 5. Point Your Tools at the Proxy
+### 6. Point Your Tools at the Proxy
 
 #### Claude Code
 
@@ -216,7 +220,7 @@ response = client.chat.completions.create(
 
 ---
 
-### 6. Clean Up (When Done)
+### 7. Clean Up (When Done)
 
 Revert your shell to use the direct Anthropic API:
 
