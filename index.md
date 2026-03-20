@@ -149,19 +149,6 @@ model_list:
       aws_region_name: us-west-2
       api_key: os.environ/BEDROCK_API_KEY
 
-  # Claude Opus 4
-  - model_name: claude-opus-4-20250115
-    litellm_params:
-      model: bedrock/converse/us.anthropic.claude-opus-4-20250115-v1:0
-      aws_region_name: us-west-2
-      api_key: os.environ/BEDROCK_API_KEY
-
-  - model_name: claude-opus-4
-    litellm_params:
-      model: bedrock/converse/us.anthropic.claude-opus-4-20250115-v1:0
-      aws_region_name: us-west-2
-      api_key: os.environ/BEDROCK_API_KEY
-
 general_settings:
   master_key: sk-1234  # Change this to a secure key for non-local deployments
 ```
